@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/gt-america-trial');
+
+/* Botway Typography Foundation */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-feature-settings: 'cv11' 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'GT America Trial', 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+}
+
+/* Soft scale animation - calm, no bounce */
+@keyframes blink-scale {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.02);
+        opacity: 0.9;
+    }
+}
+
+.animate-blink-scale {
+    animation: blink-scale 2.5s linear infinite;
+}
+
+.animate-blink-scale-delay-1 {
+    animation: blink-scale 2s linear infinite;
+    animation-delay: 0.2s;
+}
+
+.animate-blink-scale-delay-2 {
+    animation: blink-scale 2s linear infinite;
+    animation-delay: 0.4s;
+}
+
+/* CTA rise effect - smooth 1-2px lift */
+@keyframes cta-rise {
+    to {
+        transform: translateY(-2px);
+    }
+}
+
+/* Gentle intelligence animation - smooth cursor interaction */
+@keyframes intelligence-pulse {
+    0%, 100% { transform: translate3d(0,0,0); }
+    12% { transform: translate3d(-1px, 0, 0); }
+    25% { transform: translate3d(1px, 0, 0); }
+    37% { transform: translate3d(-0.5px, 0, 0); }
+    50% { transform: translate3d(0.5px, 0, 0); }
+    62% { transform: translate3d(-0.5px, 0, 0); }
+    75% { transform: translate3d(1px, 0, 0); }
+    87% { transform: translate3d(-0.5px, 0, 0); }
+}
+
+/* SVG hover effect */
+@keyframes vibrate {
+    0%, 100% { transform: translate3d(0,0,0); }
+    12% { transform: translate3d(-1px, 0, 0); }
+    25% { transform: translate3d(1px, 0, 0); }
+    37% { transform: translate3d(-0.5px, 0, 0); }
+    50% { transform: translate3d(0.5px, 0, 0); }
+    62% { transform: translate3d(-0.5px, 0, 0); }
+    75% { transform: translate3d(1px, 0, 0); }
+    87% { transform: translate3d(-0.5px, 0, 0); }
+}
+
+/* Scoped vibrate helper — apply `vibrate-on-hover` to the anchor */
+.vibrate-on-hover svg {
+    transition: transform 200ms linear, filter 200ms linear, opacity 200ms linear;
+    transform-origin: center;
+    will-change: transform;
+}
+.vibrate-on-hover:hover svg,
+.vibrate-on-hover:focus svg {
+    animation: vibrate 0.4s linear infinite;
+    filter: drop-shadow(0 2px 8px rgba(76, 191, 138, 0.12));
+}
+
+/* Underline slide from left on hover */
+@keyframes underline-slide {
+    from {
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    to {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+}
+
+.underline-slide::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FF6A3D;
+    animation: underline-slide 300ms linear forwards;
+    display: none;
+}
+
+/* Respect user's reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+    .vibrate-on-hover svg,
+    .vibrate-on-hover:hover svg,
+    .vibrate-on-hover:focus svg {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Smooth fade-in animation for page sections */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Fade-in section: hidden by default, animates on scroll */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.fade-in-section.animate {
+    animation: fadeInUp 400ms linear forwards;
+}
+
+/* Respect reduced motion for fade animations */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-section {
+        opacity: 1;
+        transform: translateY(0);
+        animation: none !important;
+    }
+}

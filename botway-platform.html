@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botway Platform</title>
+    <script src="./css/tailwind.3.4.17.css"></script>
+    <link href="./css/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body class="font-inter">
+
+    <nav class="navbar-main bg-softCanvas border-b border-warmGray/20">
+        <div class="2xl:max-w-[1472px] mx-auto px-4 py-4 md:py-6">
+            <div class="flex items-center justify-between h-16">
+                <!-- Brand -->
+                <div class="flex items-center gap-4">
+                    <a href="#">
+                        <img src="./images/logo-platform.svg" class="max-w-[150px] w-full" />
+                    </a>
+                </div>
+
+                <!-- Right: contact + profile -->
+                <div class="flex items-center gap-4">
+                    <div class="hidden md:flex items-center gap-4 text-charcoalSand/90">
+                        <div class="flex items-center gap-3">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.4 20C12.5778 20 10.8 19.6667 9.06667 19C7.24444 18.2889 5.63333 17.2222 4.23333 15.8C2.83333 14.3778 1.75556 12.7556 1 10.9333C0.333333 9.2 0 7.42222 0 5.6C0 4.57778 0.255556 3.64444 0.766667 2.8C1.27778 1.95555 1.95556 1.27778 2.8 0.766666C3.64444 0.255554 4.57778 -1.90735e-06 5.6 -1.90735e-06C5.86667 -1.90735e-06 6.04444 0.133333 6.13333 0.4L8.66667 6.66667C8.71111 6.8 8.7 6.94444 8.63333 7.1C8.56667 7.25556 8.46667 7.35555 8.33333 7.4L5.6 8.53333C5.64444 9.55556 5.93333 10.5111 6.46667 11.4C7 12.2889 7.71111 13 8.6 13.5333C9.48889 14.0667 10.4444 14.3556 11.4667 14.4L12.6 11.6667C12.6444 11.5333 12.7444 11.4333 12.9 11.3667C13.0556 11.3 13.2 11.2889 13.3333 11.3333L19.6 13.8667C19.8667 13.9556 20 14.1333 20 14.4C20 15.4222 19.7444 16.3556 19.2333 17.2C18.7222 18.0444 18.0444 18.7222 17.2 19.2333C16.3556 19.7444 15.4222 20 14.4 20ZM5.2 1.2C4.08889 1.28889 3.14444 1.75555 2.36667 2.6C1.58889 3.44444 1.2 4.44444 1.2 5.6C1.2 7.37778 1.53333 9.06667 2.2 10.6667C2.86667 12.2667 3.82222 13.6889 5.06667 14.9333C6.31111 16.1778 7.73333 17.1333 9.33333 17.8C10.9333 18.4667 12.6222 18.8 14.4 18.8C15.5556 18.8 16.5556 18.4111 17.4 17.6333C18.2444 16.8556 18.7111 15.9111 18.8 14.8L13.4667 12.6667L12.4 15.2667C12.3111 15.4889 12.1333 15.6 11.8667 15.6C10.5333 15.6 9.28889 15.2667 8.13333 14.6C6.97778 13.9333 6.06667 13.0222 5.4 11.8667C4.73333 10.7111 4.4 9.46667 4.4 8.13333C4.4 7.86667 4.51111 7.68889 4.73333 7.6L7.33333 6.53333L5.2 1.2Z"
+                                    fill="currentColor" />
+                            </svg>
+                            <span class="text-sm">+12 123 12345</span>
+                        </div>
+                        <button
+                            class="w-10 h-10 rounded-full border border-charcoalSand/20 flex items-center justify-center hover:bg-lightClay hover:text-tangerinePop transition-all linear 200ms">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-charcoalSand"
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 12a4 4 0 100-8 4 4 0 000 8zM6 20a6 6 0 0112 0" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Mobile hamburger -->
+                    <div class="lg:hidden">
+                        <button id="nav-toggle" aria-controls="mobile-menu" aria-expanded="false"
+                            class="p-2 rounded-md text-charcoalSand/80 hover:bg-lightClay/20 focus:outline-none focus:ring-2 focus:ring-tangerinePop/20">
+                            <span class="sr-only">Open main menu</span>
+                            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile menu (collapsible) -->
+            <div id="mobile-menu"
+                class="lg:hidden max-h-0 opacity-0 overflow-hidden transition-all linear 300ms bg-softCanvas/80">
+                <div class="pt-4 pb-6 space-y-2 px-3">
+                    <!-- <a href="#"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-charcoalSand/80 hover:bg-lightClay/20 transition-colors linear 150ms">Home</a>
+                    <a href="#"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-charcoalSand/80 hover:bg-lightClay/20 transition-colors linear 150ms">Listings</a>
+                    <a href="#"
+                        class="block px-3 py-2 rounded-md text-base font-medium text-charcoalSand/80 hover:bg-lightClay/20 transition-colors linear 150ms">Contact</a> -->
+                    <div class="border-t border-warmGray/20 mt-3 pt-3">
+                        <div class="flex items-center gap-3 text-charcoalSand/80 px-3">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.4 20C12.5778 20 10.8 19.6667 9.06667 19C7.24444 18.2889 5.63333 17.2222 4.23333 15.8C2.83333 14.3778 1.75556 12.7556 1 10.9333C0.333333 9.2 0 7.42222 0 5.6C0 4.57778 0.255556 3.64444 0.766667 2.8C1.27778 1.95555 1.95556 1.27778 2.8 0.766666C3.64444 0.255554 4.57778 -1.90735e-06 5.6 -1.90735e-06C5.86667 -1.90735e-06 6.04444 0.133333 6.13333 0.4L8.66667 6.66667C8.71111 6.8 8.7 6.94444 8.63333 7.1C8.56667 7.25556 8.46667 7.35555 8.33333 7.4L5.6 8.53333C5.64444 9.55556 5.93333 10.5111 6.46667 11.4C7 12.2889 7.71111 13 8.6 13.5333C9.48889 14.0667 10.4444 14.3556 11.4667 14.4L12.6 11.6667C12.6444 11.5333 12.7444 11.4333 12.9 11.3667C13.0556 11.3 13.2 11.2889 13.3333 11.3333L19.6 13.8667C19.8667 13.9556 20 14.1333 20 14.4C20 15.4222 19.7444 16.3556 19.2333 17.2C18.7222 18.0444 18.0444 18.7222 17.2 19.2333C16.3556 19.7444 15.4222 20 14.4 20ZM5.2 1.2C4.08889 1.28889 3.14444 1.75555 2.36667 2.6C1.58889 3.44444 1.2 4.44444 1.2 5.6C1.2 7.37778 1.53333 9.06667 2.2 10.6667C2.86667 12.2667 3.82222 13.6889 5.06667 14.9333C6.31111 16.1778 7.73333 17.1333 9.33333 17.8C10.9333 18.4667 12.6222 18.8 14.4 18.8C15.5556 18.8 16.5556 18.4111 17.4 17.6333C18.2444 16.8556 18.7111 15.9111 18.8 14.8L13.4667 12.6667L12.4 15.2667C12.3111 15.4889 12.1333 15.6 11.8667 15.6C10.5333 15.6 9.28889 15.2667 8.13333 14.6C6.97778 13.9333 6.06667 13.0222 5.4 11.8667C4.73333 10.7111 4.4 9.46667 4.4 8.13333C4.4 7.86667 4.51111 7.68889 4.73333 7.6L7.33333 6.53333L5.2 1.2Z"
+                                    fill="white" />
+                            </svg>
+                            <span class="text-sm">+12 123 12345</span>
+                        </div>
+                        <div class="px-3 mt-3">
+                            <button
+                                class="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center hover:bg-white/5 transition-colors duration-200">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-white/90"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 12a4 4 0 100-8 4 4 0 000 8zM6 20a6 6 0 0112 0" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section relative bg-softCanvas">
+        <div class="2xl:max-w-[1472px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 gap-8 items-center py-14 lg:py-24">
+
+                <!-- Left: Headline + CTAs + Promo -->
+                <div class="text-center fade-in-section">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-inkBlack leading-tight text-center">
+                        Botway = AI x
+                        Real Estate</h1>
+                    <h3 class="mt-6 text-3xl lg:text-4xl text-tangerinePop font-semibold">
+                        Buy, Sell, or Rent for just 1%
+                    </h3>
+                    <p class="mt-6 text-base lg:text-lg text-charcoalSand max-w-2xl m-auto">A smarter, faster, more
+                        transparent real estate experience powered by automation, data, and Clinton Botway's 15 years of
+                        expertise.</p>
+
+                    <div class="mt-8 flex flex-wrap gap-4 justify-center">
+                        <a href="#"
+                            class="inline-flex items-center px-6 py-3 font-semibold rounded-full bg-transparent border-2 border-inkBlack text-inkBlack hover:bg-softCanvas hover:border-tangerinePop hover:text-tangerinePop transition-all linear 300ms w-full max-w-[190px]">Join
+                            Early Access</a>
+                        <a href="#"
+                            class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-inkBlack text-softCanvas font-semibold border-2 border-inkBlack hover:bg-softCanvas hover:text-inkBlack transition-all linear 300ms w-full max-w-[190px]">For
+                            Landlords</a>
+                    </div>
+
+                    <!-- Promo card with remaining count -->
+                    <div class="mt-10 flex items-center gap-6 justify-center">
+                        <div
+                            class="rounded-2xl bg-white text-inkBlack py-4 px-6 shadow-lg flex-1 max-w-[530px] flex gap-8 animate-blink-scale border border-softCanvas/50">
+                            <div class="text-sm text-start flex items-center gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="lucide lucide-tag min-w-6 h-6 text-tangerinePop inline-block">
+                                    <path
+                                        d="M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z">
+                                    </path>
+                                    <circle cx="7.5" cy="7.5" r=".5" fill="currentColor"></circle>
+                                </svg>
+                                <div>The first 100 clients who use code <strong
+                                        class="py-[2px] px-2 bg-inkBlack text-softCanvas rounded-full text-sm font-semibold">FREE</strong>
+                                    pay 0% on their first transaction</div>
+                            </div>
+                            <div class="rounded-xl bg-tangerinePop text-white px-2 shadow-2xl flex items-center justify-center "
+                                style="min-width: 120px;">
+                                <div class="text-xl font-semibold">83 Left!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="relative top-[75px] lg:top-[120px]">
+                        <a href="#"
+                            class="vibrate-on-hover text-sm lg:text-base inline-block bg-inkBlack text-softCanvas px-6 py-3 rounded-full shadow hover:bg-charcoalSand transition-all linear 300ms inline-flex items-center gap-2 shadow-[0px_6px_20px_0px_rgba(255,106,61,0.15)]">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.4 20C12.5778 20 10.8 19.6667 9.06667 19C7.24444 18.2889 5.63333 17.2222 4.23333 15.8C2.83333 14.3778 1.75556 12.7556 1 10.9333C0.333333 9.2 0 7.42222 0 5.6C0 4.57778 0.255556 3.64444 0.766667 2.8C1.27778 1.95555 1.95556 1.27778 2.8 0.766666C3.64444 0.255554 4.57778 -1.90735e-06 5.6 -1.90735e-06C5.86667 -1.90735e-06 6.04444 0.133333 6.13333 0.4L8.66667 6.66667C8.71111 6.8 8.7 6.94444 8.63333 7.1C8.56667 7.25556 8.46667 7.35555 8.33333 7.4L5.6 8.53333C5.64444 9.55556 5.93333 10.5111 6.46667 11.4C7 12.2889 7.71111 13 8.6 13.5333C9.48889 14.0667 10.4444 14.3556 11.4667 14.4L12.6 11.6667C12.6444 11.5333 12.7444 11.4333 12.9 11.3667C13.0556 11.3 13.2 11.2889 13.3333 11.3333L19.6 13.8667C19.8667 13.9556 20 14.1333 20 14.4C20 15.4222 19.7444 16.3556 19.2333 17.2C18.7222 18.0444 18.0444 18.7222 17.2 19.2333C16.3556 19.7444 15.4222 20 14.4 20ZM5.2 1.2C4.08889 1.28889 3.14444 1.75555 2.36667 2.6C1.58889 3.44444 1.2 4.44444 1.2 5.6C1.2 7.37778 1.53333 9.06667 2.2 10.6667C2.86667 12.2667 3.82222 13.6889 5.06667 14.9333C6.31111 16.1778 7.73333 17.1333 9.33333 17.8C10.9333 18.4667 12.6222 18.8 14.4 18.8C15.5556 18.8 16.5556 18.4111 17.4 17.6333C18.2444 16.8556 18.7111 15.9111 18.8 14.8L13.4667 12.6667L12.4 15.2667C12.3111 15.4889 12.1333 15.6 11.8667 15.6C10.5333 15.6 9.28889 15.2667 8.13333 14.6C6.97778 13.9333 6.06667 13.0222 5.4 11.8667C4.73333 10.7111 4.4 9.46667 4.4 8.13333C4.4 7.86667 4.51111 7.68889 4.73333 7.6L7.33333 6.53333L5.2 1.2Z"
+                                    fill="white"></path>
+                            </svg>
+                            Schedule a call with Clinton Botway</a>
+                    </div>
+                </div>
+
+                <!-- Right: Image slider -->
+                <div class="hero-slider-wrapper hidden">
+                    <div class="hero-slider relative overflow-hidden rounded-3xl shadow-2xl">
+                        <div class="hero-slider-track flex transition-transform duration-700 ease-in-out">
+                            <div class="hero-slide flex-shrink-0 w-full">
+                                <img src="./images/property-showcase.jpg" alt="Slide 1"
+                                    class="w-full h-[56vh] lg:h-[72vh] object-cover rounded-3xl"
+                                    onerror="this.style.display='none'">
+                            </div>
+                            <div class="hero-slide flex-shrink-0 w-full">
+                                <img src="./images/property-showcase2.jpg" alt="Slide 2"
+                                    class="w-full h-[56vh] lg:h-[72vh] object-cover rounded-3xl"
+                                    onerror="this.style.display='none'">
+                            </div>
+                            <div class="hero-slide flex-shrink-0 w-full">
+                                <img src="./images/botway-img2.jpg" alt="Slide 3"
+                                    class="w-full h-[56vh] lg:h-[72vh] object-cover rounded-3xl"
+                                    onerror="this.style.display='none'">
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <button
+                            class="hero-prev absolute left-4 top-1/2 -translate-y-1/2 bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition"
+                            aria-label="Previous slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button
+                            class="hero-next absolute right-4 top-1/2 -translate-y-1/2 bg-white/10 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-white/20 transition"
+                            aria-label="Next slide">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <!-- Pagination dots -->
+                        <div class="hero-dots absolute left-1/2 -translate-x-1/2 bottom-4 flex gap-3">
+                            <button class="hero-dot w-3 h-3 rounded-full bg-white/60" aria-label="Slide 1"></button>
+                            <button class="hero-dot w-3 h-3 rounded-full bg-white/40" aria-label="Slide 2"></button>
+                            <button class="hero-dot w-3 h-3 rounded-full bg-white/40" aria-label="Slide 3"></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="video-section py-[80px] lg:py-[120px] bg-softCanvas">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div
+                class="relative aspect-video rounded-2xl overflow-hidden shadow-2xl bg-white border-2 border-warmGray/20 fade-in-section">
+                <!-- Clickable overlay: opens modal and plays YouTube video. Add `data-video-id` to change video. -->
+                <button id="open-video" data-video-id="ysz5S6PUM-U"
+                    class="absolute inset-0 flex items-center justify-center bg-charcoalSand/10 hover:bg-lightClay/30 focus:outline-none transition-all linear 200ms">
+                    <div class="text-center space-y-4">
+                        <div class="w-20 h-20 mx-auto rounded-full bg-tangerinePop/10 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-play w-10 h-10 text-tangerinePop">
+                                <polygon points="6 3 20 12 6 21 6 3"></polygon>
+                            </svg>
+                        </div>
+                        <p class="text-tangerinePop">Founder Introduction Video</p>
+                        <p class="text-sm text-charcoalSand">Coming Soon</p>
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- bg-gradient-to-r -->
+
+    <section class="what-is-section pb-[50px] lg:pb-[80px] xl:pb-[100px] bg-softCanvas px-4 sm:px-6 lg:px-8">
+        <div class="2xl:max-w-[1472px] mx-auto text-center fade-in-section">
+
+            <h2 class="text-4xl md:text-5xl font-bold text-inkBlack">What is Botway?</h2>
+            <p class="mt-4 text-sm sm:text-base text-charcoalSand max-w-2xl mx-auto">Botway is the first AI real estate
+                platform engineered to outperform traditional brokerage models in speed, accuracy, pricing intelligence,
+                and cost.</p>
+
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+                <!-- Card 1 -->
+                <div class="feature-card flex flex-col items-center text-center px-4 opacity-0 translate-y-6 transition-transform linear 700ms"
+                    data-observe>
+                    <div
+                        class="rounded-xl border border-warmGray/20 text-inkBlack shadow-sm p-6 text-center hover:shadow-xl hover:border-tangerinePop/30 transition-all linear 300ms bg-white">
+                        <div
+                            class="bg-tangerinePop text-white rounded-xl p-4 w-20 h-20 flex items-center justify-center shadow-md hover:scale-105 transition-transform linear 300ms mx-auto">
+                            <!-- Home search SVG -->
+                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_4408)">
+                                    <path
+                                        d="M17.5 31.6166H6.65C6.02778 31.6166 5.52223 31.4027 5.13334 30.9749C4.74445 30.5472 4.55 30.0611 4.55 29.5166V14.9333L15.5167 5.24994C16.0611 4.78328 16.7222 4.54995 17.5 4.54995C18.2778 4.54995 18.9389 4.78328 19.4833 5.24994L33.3667 17.4999C33.5222 17.6555 33.7167 17.7138 33.95 17.6749C34.1833 17.6361 34.3778 17.5388 34.5333 17.3833C34.6889 17.2277 34.7472 17.0333 34.7083 16.7999C34.6694 16.5666 34.5722 16.3722 34.4167 16.2166L32.0833 14.2333V5.94995C32.0833 4.78328 31.6556 3.77217 30.8 2.91661C29.9444 2.06106 28.9333 1.65272 27.7667 1.69161C26.6 1.7305 25.6083 2.15828 24.7917 2.97495C23.975 3.79161 23.5278 4.78328 23.45 5.94995V6.64995L20.5333 4.08328C19.6778 3.3055 18.6667 2.91661 17.5 2.91661C16.3333 2.91661 15.3222 3.3055 14.4667 4.08328L0.583337 16.2166C0.350004 16.3722 0.233337 16.5666 0.233337 16.7999C0.233337 17.0333 0.311115 17.2277 0.466671 17.3833C0.622226 17.5388 0.816671 17.6361 1.05 17.6749C1.28334 17.7138 1.47778 17.6555 1.63334 17.4999L2.91667 16.4499V29.5166C2.91667 30.5277 3.28612 31.4027 4.025 32.1416C4.76389 32.8805 5.63889 33.2499 6.65 33.2499H17.5C17.7333 33.2499 17.9278 33.1722 18.0833 33.0166C18.2389 32.8611 18.3167 32.6666 18.3167 32.4333C18.3167 32.1999 18.2389 32.0055 18.0833 31.8499C17.9278 31.6944 17.7333 31.6166 17.5 31.6166ZM25.0833 5.94995C25.1611 5.17217 25.4528 4.5305 25.9583 4.02495C26.4639 3.51939 27.0861 3.28606 27.825 3.32495C28.5639 3.36383 29.1861 3.63606 29.6917 4.14161C30.1972 4.64717 30.45 5.24994 30.45 5.94995V12.7166L25.0833 8.04995V5.94995ZM17.5 9.91661C16.4111 9.91661 15.4778 10.3055 14.7 11.0833C13.9222 11.8611 13.5333 12.7944 13.5333 13.8833C13.5333 14.9722 13.9222 15.9055 14.7 16.6833C15.4778 17.4611 16.4111 17.8499 17.5 17.8499C18.5889 17.8499 19.5222 17.4611 20.3 16.6833C21.0778 15.9055 21.4667 14.9722 21.4667 13.8833C21.4667 12.7944 21.0778 11.8611 20.3 11.0833C19.5222 10.3055 18.5889 9.91661 17.5 9.91661ZM19.8333 13.8833C19.8333 14.5833 19.6 15.1472 19.1333 15.5749C18.6667 16.0027 18.1222 16.2166 17.5 16.2166C16.8778 16.2166 16.3333 16.0027 15.8667 15.5749C15.4 15.1472 15.1667 14.6027 15.1667 13.9416C15.1667 13.2805 15.4 12.7166 15.8667 12.2499C16.3333 11.7833 16.8778 11.5499 17.5 11.5499C18.1222 11.5499 18.6667 11.7833 19.1333 12.2499C19.6 12.7166 19.8333 13.2611 19.8333 13.8833ZM34.5333 31.9666L31.7333 29.0499C32.4333 28.0388 32.7833 26.9111 32.7833 25.6666C32.7833 24.1111 32.2194 22.7888 31.0917 21.6999C29.9639 20.6111 28.6222 20.0666 27.0667 20.0666C25.5111 20.0666 24.1694 20.6111 23.0417 21.6999C21.9139 22.7888 21.35 24.1305 21.35 25.7249C21.35 27.3194 21.9139 28.6611 23.0417 29.7499C24.1694 30.8388 25.5111 31.3833 27.0667 31.3833C28.3889 31.3833 29.5556 30.9944 30.5667 30.2166L33.25 33.0166C33.4056 33.1722 33.6 33.2694 33.8333 33.3083C34.0667 33.3472 34.2806 33.2888 34.475 33.1333C34.6694 32.9777 34.7667 32.7833 34.7667 32.5499C34.7667 32.3166 34.6889 32.1222 34.5333 31.9666ZM27.0667 29.7499C25.9778 29.7499 25.025 29.3611 24.2083 28.5833C23.3917 27.8055 22.9833 26.8527 22.9833 25.7249C22.9833 24.5972 23.3917 23.6444 24.2083 22.8666C25.025 22.0888 25.9972 21.6999 27.125 21.6999C28.2528 21.6999 29.2056 22.0888 29.9833 22.8666C30.7611 23.6444 31.15 24.5972 31.15 25.7249C31.15 26.8527 30.7611 27.8055 29.9833 28.5833C29.2056 29.3611 28.2333 29.7499 27.0667 29.7499Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2_4408">
+                                        <rect width="35" height="35" fill="white" transform="matrix(1 0 0 -1 0 35)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold mb-3 text-inkBlack">Lease Faster</h3>
+                        <div class="text-base text-charcoalSand mt-1">with MarketMaker</div>
+                        <p class="mt-3 text-base text-charcoalSand/70 max-w-xs">Instant responses, automated lead
+                            qualification, and 24/7 smart scheduling cuts vacancy loss and accelerates absorption.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="feature-card flex flex-col items-center text-center px-4 opacity-0 translate-y-6 transition-transform linear 700ms delay-100"
+                    data-observe>
+                    <div
+                        class="rounded-xl border border-warmGray/20 text-inkBlack shadow-sm p-6 text-center hover:shadow-xl hover:border-tangerinePop/30 transition-all linear 300ms bg-white">
+                        <div
+                            class="bg-tangerinePop text-white rounded-xl p-4 w-20 h-20 flex items-center justify-center shadow-md hover:scale-105 transition-transform linear 300ms mx-auto">
+                            <!-- Users / dashboard SVG -->
+                            <svg width="35" height="35" viewBox="0 0 35 35" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_2_4413)">
+                                    <path
+                                        d="M13.3 21.9333C13.3 22.1666 13.3778 22.3416 13.5333 22.4583C13.6889 22.575 13.8444 22.6333 14 22.6333C14.1556 22.6333 14.3111 22.575 14.4667 22.4583C14.6222 22.3416 14.7 22.1861 14.7 21.9916C14.7 21.7972 14.6222 21.6416 14.4667 21.525C14.3111 21.4083 14.1556 21.35 14 21.35C13.8444 21.35 13.6889 21.4083 13.5333 21.525C13.3778 21.6416 13.3 21.7777 13.3 21.9333ZM16.8 21.9333C16.8 22.1666 16.8778 22.3416 17.0333 22.4583C17.1889 22.575 17.3444 22.6333 17.5 22.6333C17.6556 22.6333 17.8111 22.575 17.9667 22.4583C18.1222 22.3416 18.2 22.1861 18.2 21.9916C18.2 21.7972 18.1222 21.6416 17.9667 21.525C17.8111 21.4083 17.6556 21.35 17.5 21.35C17.3444 21.35 17.1889 21.4083 17.0333 21.525C16.8778 21.6416 16.8 21.7777 16.8 21.9333ZM20.3 21.9333C20.3 22.1666 20.3778 22.3416 20.5333 22.4583C20.6889 22.575 20.8444 22.6333 21 22.6333C21.1556 22.6333 21.3111 22.575 21.4667 22.4583C21.6222 22.3416 21.7 22.1861 21.7 21.9916C21.7 21.7972 21.6222 21.6416 21.4667 21.525C21.3111 21.4083 21.1556 21.35 21 21.35C20.8444 21.35 20.6889 21.4083 20.5333 21.525C20.3778 21.6416 20.3 21.7777 20.3 21.9333ZM6.53333 22.6333C5.6 22.6333 4.74444 22.3805 3.96667 21.875C3.18889 21.3694 2.625 20.6888 2.275 19.8333C1.925 18.9777 1.84722 18.0833 2.04167 17.15C2.23611 16.2166 2.66389 15.4194 3.325 14.7583C3.98611 14.0972 4.76389 13.6888 5.65833 13.5333C6.55278 13.3777 7.42778 13.475 8.28333 13.825C9.13889 14.175 9.83889 14.7388 10.3833 15.5166C10.9278 16.2944 11.2 17.15 11.2 18.0833C11.2 19.3277 10.7528 20.3972 9.85833 21.2916C8.96389 22.1861 7.85556 22.6333 6.53333 22.6333ZM6.53333 14.8166C5.91111 14.8166 5.32778 14.9916 4.78333 15.3416C4.23889 15.6916 3.83056 16.1777 3.55833 16.8C3.28611 17.4222 3.22778 18.0638 3.38333 18.725C3.53889 19.3861 3.85 19.9305 4.31667 20.3583C4.78333 20.7861 5.32778 21.0777 5.95 21.2333C6.57222 21.3888 7.19444 21.3305 7.81667 21.0583C8.43889 20.7861 8.925 20.3777 9.275 19.8333C9.625 19.2888 9.8 18.7055 9.8 18.0833C9.8 17.15 9.48889 16.3722 8.86667 15.75C8.24444 15.1277 7.46667 14.8166 6.53333 14.8166ZM12.4833 30.9166H0.7C0.466667 30.9166 0.291667 30.8583 0.175 30.7416C0.0583333 30.625 0 30.45 0 30.2166V27.8833C0 26.0944 0.641667 24.5583 1.925 23.275C3.20833 21.9916 4.76389 21.35 6.59167 21.35C8.41944 21.35 9.95556 21.9916 11.2 23.275C12.4444 24.5583 13.1056 26.0944 13.1833 27.8833V30.2166C13.1833 30.45 13.1056 30.625 12.95 30.7416C12.7944 30.8583 12.6389 30.9166 12.4833 30.9166ZM1.4 29.5166H11.7833V27.8833C11.7833 26.4833 11.2778 25.2777 10.2667 24.2666C9.25556 23.2555 8.03056 22.75 6.59167 22.75C5.15278 22.75 3.92778 23.2555 2.91667 24.2666C1.90556 25.2777 1.4 26.4833 1.4 27.8833V29.5166ZM28.4667 22.6333C27.5333 22.6333 26.6778 22.3805 25.9 21.875C25.1222 21.3694 24.5583 20.6888 24.2083 19.8333C23.8583 18.9777 23.7611 18.0833 23.9167 17.15C24.0722 16.2166 24.4806 15.4194 25.1417 14.7583C25.8028 14.0972 26.6 13.6888 27.5333 13.5333C28.4667 13.3777 29.3611 13.475 30.2167 13.825C31.0722 14.175 31.7528 14.7388 32.2583 15.5166C32.7639 16.2944 33.0167 17.15 33.0167 18.0833C33.0167 19.3277 32.5694 20.3972 31.675 21.2916C30.7806 22.1861 29.7111 22.6333 28.4667 22.6333ZM28.4667 14.8166C27.7667 14.8166 27.1444 14.9916 26.6 15.3416C26.0556 15.6916 25.6667 16.1777 25.4333 16.8C25.2 17.4222 25.1417 18.0638 25.2583 18.725C25.375 19.3861 25.6667 19.9305 26.1333 20.3583C26.6 20.7861 27.1639 21.0777 27.825 21.2333C28.4861 21.3888 29.1083 21.3305 29.6917 21.0583C30.275 20.7861 30.7417 20.3777 31.0917 19.8333C31.4417 19.2888 31.6167 18.7055 31.6167 18.0833C31.6167 17.15 31.3056 16.3722 30.6833 15.75C30.0611 15.1277 29.3222 14.8166 28.4667 14.8166ZM34.3 30.9166H22.5167C22.3611 30.9166 22.2056 30.8583 22.05 30.7416C21.8944 30.625 21.8167 30.45 21.8167 30.2166V27.8833C21.8944 26.0944 22.5556 24.5583 23.8 23.275C25.0444 21.9916 26.5806 21.35 28.4083 21.35C30.2361 21.35 31.7917 21.9916 33.075 23.275C34.3583 24.5583 35 26.0944 35 27.8833V30.2166C35 30.45 34.9417 30.625 34.825 30.7416C34.7083 30.8583 34.5333 30.9166 34.3 30.9166ZM23.2167 29.5166H33.6V27.8833C33.6 26.4833 33.0944 25.2777 32.0833 24.2666C31.0722 23.2555 29.8472 22.75 28.4083 22.75C26.9694 22.75 25.7444 23.2555 24.7333 24.2666C23.7222 25.2777 23.2167 26.4833 23.2167 27.8833V29.5166ZM14.35 17.85C14.1944 17.85 14.0389 17.7916 13.8833 17.675C13.7278 17.5583 13.65 17.4222 13.65 17.2666V15.1666H13.0667C12.4444 15.1666 11.9 14.9527 11.4333 14.525C10.9667 14.0972 10.7333 13.5722 10.7333 12.95V6.29996C10.7333 5.67774 10.9667 5.15274 11.4333 4.72496C11.9 4.29718 12.4444 4.08329 13.0667 4.08329H21.8167C22.4389 4.08329 22.9639 4.29718 23.3917 4.72496C23.8194 5.15274 24.0333 5.67774 24.0333 6.29996V12.95C24.0333 13.5722 23.8194 14.0972 23.3917 14.525C22.9639 14.9527 22.4389 15.1666 21.8167 15.1666H17.3833L14.8167 17.7333C14.7389 17.8888 14.5833 17.9277 14.35 17.85ZM13.0667 5.48329C12.8333 5.48329 12.6194 5.56107 12.425 5.71663C12.2306 5.87218 12.1333 6.06663 12.1333 6.29996V12.95C12.1333 13.1833 12.2306 13.3972 12.425 13.5916C12.6194 13.7861 12.8333 13.8833 13.0667 13.8833H14.35C14.5833 13.8833 14.7583 13.9416 14.875 14.0583C14.9917 14.175 15.05 14.3111 15.05 14.4666V15.5166L16.5667 14C16.7222 13.9222 16.8778 13.8833 17.0333 13.8833H21.8167C22.05 13.8833 22.2639 13.7861 22.4583 13.5916C22.6528 13.3972 22.75 13.1833 22.75 12.95V6.29996C22.75 6.06663 22.6528 5.87218 22.4583 5.71663C22.2639 5.56107 22.05 5.48329 21.8167 5.48329H13.0667Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_2_4413">
+                                        <rect width="35" height="35" fill="white" transform="matrix(1 0 0 -1 0 35)" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold mb-3 text-inkBlack">Total Visibility</h3>
+                        <div class="text-base text-charcoalSand mt-1">with Console</div>
+                        <p class="mt-3 text-base text-charcoalSand/70 max-w-xs">All listings, leads, apps, tours,
+                            communications, tasks, and pricing insights in one real-time
+                            <br /> dashboard.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="feature-card flex flex-col items-center text-center px-4 opacity-0 translate-y-6 transition-transform linear 700ms delay-200"
+                    data-observe>
+                    <div
+                        class="rounded-xl border border-warmGray/20 text-inkBlack shadow-sm p-6 text-center hover:shadow-xl hover:border-tangerinePop/30 transition-all linear 300ms bg-white">
+                        <div
+                            class="bg-tangerinePop text-white rounded-xl p-4 w-20 h-20 flex items-center justify-center shadow-md hover:scale-105 transition-transform linear 300ms mx-auto">
+                            <!-- Dollar / cost SVG -->
+                            <svg width="35" height="35" viewBox="0 0 374 300" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M276.624 217.853C276.557 217.976 275.487 219.649 275.419 219.773C250.803 264.203 203.524 294.269 149.243 294.269C69.5798 294.269 5 229.514 5 149.635C5 69.7548 69.5798 5 149.243 5C199.857 5 244.383 31.1419 270.125 70.6938"
+                                    stroke="white" stroke-width="15" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M149.243 248.42C94.9187 248.42 50.7238 204.105 50.7238 149.635C50.7238 95.1637 94.9187 50.8489 149.243 50.8489C203.566 50.8489 247.761 95.1637 247.761 149.635C247.761 204.105 203.566 248.42 149.243 248.42Z"
+                                    stroke="white" stroke-width="15" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M168.903 115.785C164.472 109.454 153.328 104.748 138.764 109.147C125.392 113.186 119.4 134.644 136.841 142.891C139.579 144.186 146.591 146.949 157.173 150.699C180.855 159.094 181.633 190.281 153.527 192.742C144.161 193.562 130.805 191.038 123.699 182.191"
+                                    stroke="white" stroke-width="15" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M148.085 98.2767V200.992" stroke="white" stroke-width="10"
+                                    stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                                <path
+                                    d="M368.997 118.006L307.011 13.257L245.025 118.006H277.347V286.012H336.676V118.006H368.997Z"
+                                    stroke="white" stroke-width="15" stroke-miterlimit="10" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3 class="mt-6 text-xl font-bold mb-3 text-inkBlack">Lower Costs</h3>
+                        <div class="text-base text-charcoalSand mt-1">= Higher NOI</div>
+                        <p class="mt-3 text-base text-charcoalSand/70 max-w-xs">Full-service leasing at
+                            <br /> a fraction the cost with full control
+                            <br /> of your marketing, data, and pricing decisions.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section
+        class="newstand-realestate-section py-[50px] lg:py-[80px] xl:py-[100px] px-4 sm:px-6 lg:px-8 bg-softCanvas border-t border-warmGray/20">
+        <div class="2xl:max-w-[1472px] mx-auto fade-in-section">
+
+            <!-- Top Section: Heading & Subtitle -->
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-inkBlack">The New Standard in Real Estate</h2>
+                <p class="mt-4 text-sm sm:text-base text-charcoalSand max-w-4xl mx-auto leading-relaxed">
+                    Botway compresses every step of the real estate process - from search to pricing to negotiation to
+                    closing - all in a single unified system that never sleeps, never forgets, and never drops the ball.
+                    And best of all, you get to work directly with Clinton!
+                </p>
+            </div>
+
+            <!-- Two-Column Layout -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+                <!-- Left Column: Text & Buttons -->
+                <div class="space-y-8 reveal-left text-center opacity-0 translate-x-[-20px] rounded-xl text-inkBlack shadow-sm p-6 shadow-xl hover:shadow-[0px_6px_20px_0px_rgba(255,106,61,0.1)] transition-all linear 300ms bg-white border-t-4 border-tangerinePop hover:border-tangerinePop relative group ring-1 ring-warmGray/10"
+                    data-observe>
+                    <div>
+                        <p class="mt-6 text-base text-charcoalSand leading-relaxed">
+                            AI-powered search, customized to your income, neighborhood, commute, schools, preferences,
+                            and lifestyle. Automated touring with 24/7 assistance and high-powered negotiation. Tour
+                            scheduling, listing analysis, rent vs buy calculations, neighborhood intelligence.
+                        </p>
+                    </div>
+
+                    <hr class="border-warmGray/20" />
+
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap justify-center gap-8 sm:pt-4">
+                        <div>
+                            <button
+                                class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-tangerinePop text-white font-semibold hover:bg-white hover:text-tangerinePop transition-all linear 300ms shadow-md hover:shadow-lg hover:translate-y-[-2px] border-2 border-tangerinePop">
+                                Landlords (Beta)
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </button>
+                            <div class="text-center">
+                                <label class="text-xs text-charcoalSand mt-1">
+                                    Sell for more, in less time.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="h-[64px] w-[1px] bg-warmGray/30 hidden sm:inline-block"></div>
+                        <div>
+                            <button
+                                class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-inkBlack text-softCanvas font-semibold hover:bg-white hover:text-inkBlack transition-all linear 300ms shadow-md hover:shadow-lg hover:translate-y-[-2px] border-2 border-inkBlack">
+                                Sellers (Alpha)
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </button>
+                            <div class="text-center">
+                                <label class="text-xs text-charcoalSand mt-1">
+                                    Reduce vacancy. Maximize your NOI.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Image -->
+                <div class="reveal-right opacity-0 translate-x-[20px] ps-10 space-y-8 rounded-xl text-inkBlack shadow-sm p-6 shadow-xl hover:shadow-[0px_6px_20px_0px_rgba(255,106,61,0.1)] transition-all linear 300ms bg-white border-t-4 border-tangerinePop hover:border-tangerinePop relative group ring-1 ring-warmGray/10"
+                    data-observe>
+                    <div class="text-center">
+                        <!-- <h3 class="text-3xl sm:text-4xl font-semibold text-gray-900">Why You Should Buy and Rent?</h3> -->
+                        <p class="mt-6 text-base text-charcoalSand leading-relaxed">
+                            Data-driven pricing, comparable analysis, targeted marketing, reporting dashboard with key
+                            sales performance indicators, applicant and purchaser management, fraud detection, and
+                            precise fair housing & anti-descrimination compliance. Master-level negotiation.
+                        </p>
+                    </div>
+
+                    <hr class="border-warmGray/20" />
+
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap justify-center gap-8 sm:pt-4">
+                        <div>
+                            <button
+                                class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-tangerinePop text-white font-semibold hover:bg-white hover:text-tangerinePop transition-all linear 300ms shadow-md hover:shadow-lg hover:translate-y-[-2px] border-2 border-tangerinePop">
+                                Buyers (Alpha)
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </button>
+                            <div class="text-center">
+                                <label class="text-xs text-charcoalSand mt-1">
+                                    Find better homes, faster.
+                                </label>
+                            </div>
+                        </div>
+                        <div class="h-[64px] w-[1px] bg-warmGray/30 hidden sm:inline-block"></div>
+                        <div>
+                            <button
+                                class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-inkBlack text-softCanvas font-semibold hover:bg-white hover:text-inkBlack transition-all linear 300ms shadow-md hover:shadow-lg hover:translate-y-[-2px] border-2 border-inkBlack">
+                                Renters (Alpha)
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none"
+                                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                                </svg>
+                            </button>
+                            <div class="text-center">
+                                <label class="text-xs text-charcoalSand mt-1">
+                                    Your perfect home, unlocked.
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div
+                        class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-300 to-gray-400 aspect-[4/3] flex items-center justify-center hidden">
+                        <img src="./images/property-showcase.jpg" alt="Modern interior design"
+                            class="w-full h-full object-cover" onerror="this.style.display='none';" />
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-20 hidden">
+                <!-- Right Column: Image -->
+                <div class="reveal-right opacity-0 translate-x-[-20px]" data-observe>
+                    <div
+                        class="rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-gray-300 to-gray-400 aspect-[4/3] flex items-center justify-center">
+                        <img src="./images/property-showcase2.jpg" alt="Modern interior design"
+                            class="w-full h-full object-cover" onerror="this.style.display='none';" />
+                    </div>
+                </div>
+
+                <!-- Left Column: Text & Buttons -->
+                <div class="space-y-8 reveal-left opacity-0 translate-x-[20px]" data-observe>
+                    <div>
+                        <h3 class="text-3xl sm:text-4xl font-semibold text-gray-900">Why You Should Buy and Rent?</h3>
+                        <p class="mt-6 text-base text-gray-600 leading-relaxed">
+                            AI-powered search, customized to your income, neighborhood, commute, schools, preferences,
+                            and lifestyle. Automated touring with 24/7 assistance and high-powered negotiation. Tour
+                            scheduling, listing analysis, rent vs buy calculations, neighborhood intelligence.
+                        </p>
+                    </div>
+
+                    <!-- Buttons -->
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-blue-500 text-white font-semibold hover:bg-blue-600 transition-colors duration-300 shadow-md hover:shadow-lg">
+                            Landlords
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </button>
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-gray-900 text-white font-semibold hover:bg-gray-800 transition-colors duration-300 shadow-md hover:shadow-lg">
+                            Sellers
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section
+        class="whybotway-section py-[50px] lg:py-[100px] bg-softCanvas/50 px-4 sm:px-6 lg:px-8 border-t border-warmGray/20">
+        <div class="2xl:max-w-[1472px] mx-auto fade-in-section">
+
+            <div class="text-center">
+                <!-- flex gap-10 items-start justify-center -->
+                <!-- Left: Image stack / promo -->
+                <!-- <div class="flex-1 flex flex-col items-center lg:items-start gap-6 reveal-left opacity-0 translate-x-[-20px]"
+                    data-observe>
+                    <div class="rounded-2xl overflow-hidden shadow-lg w-64 lg:w-56">
+                        <img src="./images/botway-img1.jpg" alt="Family" class="w-full h-64 object-cover"
+                            onerror="this.style.display='none'" />
+                    </div>
+
+                    <div class="bg-rose-200 text-rose-900 rounded-xl p-6 w-56 text-center font-semibold shadow-sm">
+                        <div class="text-lg">One platform.</div>
+                        <div class="text-lg mt-2">One fee. 1%.</div>
+                    </div>
+
+                    <div class="rounded-2xl overflow-hidden shadow-2xl w-full max-w-md lg:max-w-none">
+                        <img src="./images/botway-img2.jpg" alt="Property exterior"
+                            class="w-full h-80 object-cover rounded-2xl" onerror="this.style.display='none'" />
+                    </div>
+                </div> -->
+
+                <!-- Right: Content -->
+                <div class="flex-1 lg:col-span-2 reveal-right opacity-100 translate-y-0 translate-x-0" data-observe=""
+                    style="transition: 2500ms cubic-bezier(0.34, 1.56, 0.64, 1);">
+                    <div class="max-w-6xl m-auto">
+                        <h3 class="text-4xl md:text-5xl font-bold text-inkBlack">Why Botway?</h3>
+                        <h4 class="mt-4 sm:text-sm md:text-base text-lg text-charcoalSand leading-relaxed">
+                            The Old Brokerage Model Is Broken.
+                        </h4>
+                        <ul class="mt-6 flex justify-center gap-x-8 gap-y-4 flex-wrap">
+                            <li class="text-charcoalSand inline-flex items-center gap-3 mb-2">
+                                <div class="w-1 h-1 rounded-full bg-charcoalSand"></div>
+                                Bloated fees.
+                            </li>
+                            <li class="text-charcoalSand inline-flex items-center gap-3 mb-2">
+                                <div class="w-1 h-1 rounded-full bg-charcoalSand"></div>
+                                Missed leads.
+                            </li>
+                            <li class="text-charcoalSand inline-flex items-center gap-3 mb-2">
+                                <div class="w-1 h-1 rounded-full bg-charcoalSand"></div>
+                                Slow follow-up.
+                            </li>
+                            <li class="text-charcoalSand inline-flex items-center gap-3 mb-2">
+                                <div class="w-1 h-1 rounded-full bg-charcoalSand"></div>
+                                Generic marketing.
+                            </li>
+                            <li class="text-charcoalSand inline-flex items-center gap-3 mb-2">
+                                <div class="w-1 h-1 rounded-full bg-charcoalSand"></div>
+                                Human error.
+                            </li>
+                        </ul>
+                        <!-- <p class="mt-4 text-sm text-gray-600">
+                            <strong>The Old Brokerage Model Is Broken.</strong> Bloated fees. Missed leads. Slow
+                            follow-up. Generic marketing. Human error. Botway fixes all of it.
+                        </p> -->
+
+                        <div class="flex gap-6 justify-center">
+                            <div
+                                class="max-w-[780px] ring-1 ring-warmGray/20 p-6 rounded-xl shadow-xl mt-10 bg-white hidden">
+
+                                <p class="text-start sm:text-sm md:text-base text-lg text-charcoalSand leading-relaxed">
+                                    The Old Brokerage Model Is Broken.</p>
+
+                                <div class="mt-6 grid grid-cols-1 gap-x-8 gap-y-4 text-charcoalSand">
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0"
+                                            y="0" viewBox="0 0 329.269 329" style="enable-background:new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <g fill="#FF6A3D">
+                                                    <path
+                                                        d="M21.34 329.398c-5.461 0-10.926-2.09-15.082-6.25-8.344-8.34-8.344-21.824 0-30.164L292.848 6.391c8.34-8.34 21.824-8.34 30.164 0 8.343 8.34 8.343 21.824 0 30.164L36.422 323.148a21.231 21.231 0 0 1-15.082 6.25zm0 0"
+                                                        fill="#FF6A3D" opacity="1" data-original="#f44336" class="">
+                                                    </path>
+                                                    <path
+                                                        d="M307.93 329.398c-5.461 0-10.922-2.09-15.082-6.25L6.258 36.555c-8.344-8.34-8.344-21.825 0-30.164 8.34-8.34 21.82-8.34 30.164 0l286.59 286.593c8.343 8.34 8.343 21.825 0 30.164-4.16 4.18-9.621 6.25-15.082 6.25zm0 0"
+                                                        fill="#FF6A3D" opacity="1" data-original="#f44336" class="">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <span>Bloated fees</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0"
+                                            y="0" viewBox="0 0 329.269 329" style="enable-background:new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <g fill="#FF6A3D">
+                                                    <path
+                                                        d="M21.34 329.398c-5.461 0-10.926-2.09-15.082-6.25-8.344-8.34-8.344-21.824 0-30.164L292.848 6.391c8.34-8.34 21.824-8.34 30.164 0 8.343 8.34 8.343 21.824 0 30.164L36.422 323.148a21.231 21.231 0 0 1-15.082 6.25zm0 0"
+                                                        fill="#FF6A3D" opacity="1" data-original="#f44336" class="">
+                                                    </path>
+                                                    <path
+                                                        d="M307.93 329.398c-5.461 0-10.922-2.09-15.082-6.25L6.258 36.555c-8.344-8.34-8.344-21.825 0-30.164 8.34-8.34 21.82-8.34 30.164 0l286.59 286.593c8.343 8.34 8.343 21.825 0 30.164-4.16 4.18-9.621 6.25-15.082 6.25zm0 0"
+                                                        fill="#FF6A3D" opacity="1" data-original="#f44336" class="">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <span>Missed leads</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0"
+                                            y="0" viewBox="0 0 329.269 329" style="enable-background:new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <g fill="#FF6A3D">
+                                                    <path
+                                                        d="M21.34 329.398c-5.461 0-10.926-2.09-15.082-6.25-8.344-8.34-8.344-21.824 0-30.164L292.848 6.391c8.34-8.34 21.824-8.34 30.164 0 8.343 8.34 8.343 21.824 0 30.164L36.422 323.148a21.231 21.231 0 0 1-15.082 6.25zm0 0"
+                                                        fill="#FF6A3D" opacity="1" data-original="#f44336" class="">
+                                                    </path>
+                                                    <path
+                                                        d="M307.93 329.398c-5.461 0-10.922-2.09-15.082-6.25L6.258 36.555c-8.344-8.34-8.344-21.825 0-30.164 8.34-8.34 21.82-8.34 30.164 0l286.59 286.593c8.343 8.34 8.343 21.825 0 30.164-4.16 4.18-9.621 6.25-15.082 6.25zm0 0"
+                                                        fill="#FF6A3D" opacity="1" data-original="#f44336" class="">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <span>Slow follow-up</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0"
+                                            y="0" viewBox="0 0 329.269 329" style="enable-background:new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <g fill="#FF6A3D">
+                                                    <path
+                                                        d="M21.34 329.398c-5.461 0-10.926-2.09-15.082-6.25-8.344-8.34-8.344-21.824 0-30.164L292.848 6.391c8.34-8.34 21.824-8.34 30.164 0 8.343 8.34 8.343 21.824 0 30.164L36.422 323.148a21.231 21.231 0 0 1-15.082 6.25zm0 0"
+                                                        fill="#FF6A3D" opacity="1" data-original="#f44336" class="">
+                                                    </path>
+                                                    <path
+                                                        d="M307.93 329.398c-5.461 0-10.922-2.09-15.082-6.25L6.258 36.555c-8.344-8.34-8.344-21.825 0-30.164 8.34-8.34 21.82-8.34 30.164 0l286.59 286.593c8.343 8.34 8.343 21.825 0 30.164-4.16 4.18-9.621 6.25-15.082 6.25zm0 0"
+                                                        fill="#FF6A3D" opacity="1" data-original="#f44336" class="">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <span>Generic marketing</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                            xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12" x="0"
+                                            y="0" viewBox="0 0 329.269 329" style="enable-background:new 0 0 512 512"
+                                            xml:space="preserve" class="">
+                                            <g>
+                                                <g fill="#FF6A3D">
+                                                    <path
+                                                        d="M21.34 329.398c-5.461 0-10.926-2.09-15.082-6.25-8.344-8.34-8.344-21.824 0-30.164L292.848 6.391c8.34-8.34 21.824-8.34 30.164 0 8.343 8.34 8.343 21.824 0 30.164L36.422 323.148a21.231 21.231 0 0 1-15.082 6.25zm0 0"
+                                                        fill="#FF6A3D" opacity="1" data-original="#f44336" class="">
+                                                    </path>
+                                                    <path
+                                                        d="M307.93 329.398c-5.461 0-10.922-2.09-15.082-6.25L6.258 36.555c-8.344-8.34-8.344-21.825 0-30.164 8.34-8.34 21.82-8.34 30.164 0l286.59 286.593c8.343 8.34 8.343 21.825 0 30.164-4.16 4.18-9.621 6.25-15.082 6.25zm0 0"
+                                                        fill="#FF6A3D" opacity="1" data-original="#f44336" class="">
+                                                    </path>
+                                                </g>
+                                            </g>
+                                        </svg>
+                                        <span>Human error</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="max-w-[790px] ring-1 ring-warmGray/20 p-6 rounded-xl shadow-xl mt-10 min-h-[280px] bg-white">
+                                <div class="text-center">
+                                    <label
+                                        class="px-4 py-1 border border-tangerinePop/50 bg-lightClay rounded-full inline-block text-tangerinePop font-semibold">
+                                        Botway fixes all of it.
+                                    </label>
+                                </div>
+                                <p
+                                    class="text-center mt-4 sm:text-sm md:text-base text-lg text-charcoalSand leading-relaxed">
+                                    Our AI-powered system orchestrates:</p>
+
+                                <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-x-8 gap-y-4 text-charcoalSand">
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#4CBF8A] mt-1"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879A1 1 0 003.293 9.293l4 4a1 1 0 001.414 0l8-8z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Pricing &amp; comps</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#4CBF8A] mt-1"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879A1 1 0 003.293 9.293l4 4a1 1 0 001.414 0l8-8z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Underwriting logic</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#4CBF8A] mt-1"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879A1 1 0 003.293 9.293l4 4a1 1 0 001.414 0l8-8z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Tour scheduling</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#4CBF8A] mt-1"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879A1 1 0 003.293 9.293l4 4a1 1 0 001.414 0l8-8z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Lead management</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#4CBF8A] mt-1"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879A1 1 0 003.293 9.293l4 4a1 1 0 001.414 0l8-8z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Fraud checks</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#4CBF8A] mt-1"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879A1 1 0 003.293 9.293l4 4a1 1 0 001.414 0l8-8z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Targeted marketing</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#4CBF8A] mt-1"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879A1 1 0 003.293 9.293l4 4a1 1 0 001.414 0l8-8z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Applicant screening</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#4CBF8A] mt-1"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879A1 1 0 003.293 9.293l4 4a1 1 0 001.414 0l8-8z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Reporting &amp; dashboards</span>
+                                    </div>
+                                    <div class="flex items-center gap-3">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-[#4CBF8A] mt-1"
+                                            viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd"
+                                                d="M16.707 5.293a1 1 0 00-1.414-1.414L8 11.172 4.707 7.879A1 1 0 003.293 9.293l4 4a1 1 0 001.414 0l8-8z"
+                                                clip-rule="evenodd"></path>
+                                        </svg>
+                                        <span>Contract workflows</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        </div>
+
+        </div>
+    </section>
+
+    <section id="waitlist-form" class="py-[50px] lg:py-[100px] bg-softCanvas">
+        <div class="2xl:max-w-[1472px] mx-auto px-4">
+            <div class="max-w-3xl mx-auto fade-in-section ">
+                <div class="text-center mb-8 lg:mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-inkBlack">How can Botway help you?</h2>
+                    <p class="mt-4 sm:text-sm md:text-base text-lg text-charcoalSand leading-relaxed">Be the first to
+                        experience AI real estate Brokerage
+                    </p>
+                </div>
+                <div class="rounded-lg border border-warmGray/30 bg-white text-inkBlack p-6 lg:p-8 shadow-xl">
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                    for="fullName">Full Name <span class="text-tangerinePop">*</span></label>
+                                <input type="text"
+                                    class="flex h-10 w-full rounded-md border border-warmGray/30 bg-softCanvas/50 px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-charcoalSand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tangerinePop focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                                    id="fullName" placeholder="John Doe" required="" maxlength="100" value="">
+                            </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                    for="email">Phone Number <span class="text-tangerinePop">*</span></label>
+                                <input type="text"
+                                    class="flex h-10 w-full rounded-md border border-warmGray/30 bg-softCanvas/50 px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-charcoalSand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tangerinePop focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                                    id="email" placeholder="987-654-3210" required="" maxlength="255" value="">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label
+                                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                for="email">Email Address <span class="text-tangerinePop">*</span></label>
+                            <input type="email"
+                                class="flex h-10 w-full rounded-md border border-warmGray/30 bg-softCanvas/50 px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-charcoalSand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tangerinePop focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                                id="email" placeholder="john@example.com" required="" maxlength="255" value="">
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                    for="userType">I am a... <span class="text-tangerinePop">*</span></label>
+                                <select
+                                    class="flex h-10 w-full rounded-md border border-warmGray/30 bg-softCanvas/50 px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-charcoalSand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tangerinePop focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                                    aria-hidden="true" required="" tabindex="-1">
+                                    <option value="landlord">Landlord</option>
+                                    <option value="renter">Renter</option>
+                                    <option value="broker">Broker</option>
+                                    <option value="property-manager">Property Manager</option>
+                                </select>
+                            </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                    for="userType">Company</label>
+                                <input type="text"
+                                    class="flex h-10 w-full rounded-md border border-warmGray/30 bg-softCanvas/50 px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-charcoalSand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tangerinePop focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm"
+                                    placeholder="Enter Company Name" value="" />
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                    for="message">Property Address</label>
+                                <textarea
+                                    class="flex min-h-[80px] w-full rounded-md border border-warmGray/30 bg-softCanvas/50 px-3 py-2 text-sm ring-offset-background placeholder:text-charcoalSand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tangerinePop focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                    id="message" placeholder="Property Address" rows="4" maxlength="1000"></textarea>
+                            </div>
+                            <div class="space-y-2">
+                                <label
+                                    class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                                    for="message">Message (Optional)</label>
+                                <textarea
+                                    class="flex min-h-[80px] w-full rounded-md border border-warmGray/30 bg-softCanvas/50 px-3 py-2 text-sm ring-offset-background placeholder:text-charcoalSand focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-tangerinePop focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                                    id="message" placeholder="Tell us about your needs..." rows="4"
+                                    maxlength="1000"></textarea>
+                            </div>
+                        </div>
+                        <button
+                            class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-tangerinePop text-white font-semibold hover:bg-white hover:text-tangerinePop transition-all linear 300ms shadow-md hover:shadow-lg hover:translate-y-[-2px] w-full border-2 border-tangerinePop"
+                            type="submit">Join the Revolution</button>
+                        <p class="text-sm text-center text-charcoalSand">No spam. Only early access announcements and
+                            priority invite information.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="founder-section" class="pt-[50px] pb-[100px] bg-softCanvas border-t border-warmGray/20">
+        <div class="fade-in-section container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-8 lg:mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold text-inkBlack">Meet Clinton - Owner of Botway</h2>
+                </div>
+                <div class="rounded-lg border border-warmGray/30 bg-white text-inkBlack overflow-hidden shadow-xl">
+                    <div class="grid md:grid-cols-2 gap-0">
+                        <div
+                            class="relative aspect-square md:aspect-auto bg-softCanvas/50 flex items-center justify-center">
+                            <div class="text-center space-y-4">
+                                <img src="./images/clinton-portrait2.jpg" class="w-full h-full" />
+                            </div>
+                        </div>
+                        <div class="p-8 md:p-12 flex flex-col justify-center">
+                            <div class="space-y-6">
+                                <div
+                                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-lightClay text-tangerinePop font-semibold text-sm border border-tangerinePop/30 w-fit">
+                                    Founder &amp; CEO</div>
+                                <p class="text-lg text-charcoalSand leading-relaxed">Clinton’s mission is to deliver
+                                    massive value to clients with faster service, smarter pricing, and 24/7 availability
+                                    that no human broker can match.</p>
+                                <div class="pt-4 space-y-3">
+                                    <div class="flex items-start gap-3">
+                                        <div class="min-w-2 h-2 rounded-full bg-tangerinePop mt-2"></div>
+                                        <p class="text-charcoalSand">$450M+ properties marketed, sold, and leased</p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <div class="min-w-2 h-2 rounded-full bg-tangerinePop mt-2"></div>
+                                        <p class="text-charcoalSand">2,789 transactions across 5 states and 4 boroughs
+                                        </p>
+                                    </div>
+                                    <div class="flex items-start gap-3">
+                                        <div class="min-w-2 h-2 rounded-full bg-tangerinePop mt-2"></div>
+                                        <p class="text-charcoalSand">15 years advising developers, family offices,
+                                            HNWIs, and REPE clients</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section
+        class="brokerage-section py-[50px] lg:py-[100px] bg-softCanvas/50 px-4 sm:px-6 lg:px-8 border-t border-warmGray/20">
+        <div class="max-w-4xl mx-auto fade-in-section">
+
+            <div class="text-center reveal-up opacity-0 translate-y-6" data-observe>
+                <h2 class="text-4xl md:text-5xl font-bold mb-4 text-inkBlack">Brokerage With a Mission</h2>
+
+                <p class="mt-4 sm:text-sm md:text-base text-lg text-charcoalSand leading-relaxed">
+                    The real estate industry has a long history of shutting out the people who need help the most.
+                    Botway refuses to play that game.
+                    <br />
+                    <br /> CityFHEPS, and low-income clients are routinely ignored or discriminated against
+                    by big brokerages. Botway provides full-service representation <span
+                        class="font-semibold text-inkBlack">at zero cost</span> to them, and
+                    any profits from these transactions will be donated directly to shelters, food-relief groups, and
+                    housing-affordability organizations.
+                </p>
+
+                <div
+                    class="mt-12 border-2 border-charcoalSand rounded-2xl p-8 sm:p-10 bg-white hover:shadow-lg transition-shadow linear 300ms">
+                    <p class="text-lg sm:text-xl text-inkBlack font-semibold leading-relaxed">
+                        Plus, 10% of Botway's yearly profits go toward fighting homelessness and hunger in Clinton's
+                        hometown of New York City.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="fade-in-section footer-main bg-inkBlack text-warmGray py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-8xl mx-auto">
+
+            <!-- Top Section: Logo + Social -->
+            <div
+                class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-16 pb-12 border-b border-charcoalSand/20">
+                <div class="mb-6 sm:mb-0">
+                    <div class="flex items-center gap-2">
+                        <img src="./images/logo.svg" class="w-full max-w-[150px]">
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-6">
+                    <span class="text-sm text-softCanvas">Follow Us</span>
+                    <div class="flex gap-4 pt-2">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-charcoalSand/20 hover:bg-tangerinePop hover:text-white flex items-center justify-center transition-all linear 200ms text-warmGray"
+                            aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-linkedin w-5 h-5">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect width="4" height="12" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-charcoalSand/20 hover:bg-tangerinePop hover:text-white flex items-center justify-center transition-all linear 200ms text-warmGray"
+                            aria-label="Twitter">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-twitter w-5 h-5">
+                                <path
+                                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-charcoalSand/20 hover:bg-tangerinePop hover:text-white flex items-center justify-center transition-all linear 200ms text-warmGray"
+                            aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-instagram w-5 h-5">
+                                <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+
+                <!-- Column 1: About -->
+                <div class="reveal-up opacity-100 translate-y-0" data-observe="">
+                    <h3 class="font-semibold text-softCanvas mb-4">Botway - The Intelligent Way Home</h3>
+                    <p class="text-sm text-warmGray/80 leading-relaxed">
+                        Botway is built with enterprise-grade security and compliance. No spam. No data selling. Just a
+                        better way to buy, sell, and rent real estate.
+                    </p>
+                </div>
+
+                <!-- Column 2: Coming Soon -->
+                <div class="reveal-up opacity-100 translate-y-0" data-observe="">
+                    <h3 class="font-semibold text-softCanvas mb-4">Coming Soon</h3>
+                    <ul class="space-y-3 text-sm text-warmGray/80">
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">New Jersey</a>
+                        </li>
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">Pennsylvania</a>
+                        </li>
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">Florida</a></li>
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">Massachusetts</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Contact Us -->
+                <div class="reveal-up opacity-100 translate-y-0" data-observe="">
+                    <h3 class="font-semibold text-softCanvas mb-4">Connect With Clinton</h3>
+                    <ul class="space-y-3 text-sm text-warmGray/80">
+                        <li><a href="mailto:Clinton@BotayRE.com"
+                                class="hover:text-tangerinePop transition-colors linear 200ms">Clinton@BotayRE.com</a>
+                        </li>
+                        <li><a href="tel:+1234567890"
+                                class="hover:text-tangerinePop transition-colors linear 200ms">(123)
+                                456-7890</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Our Address -->
+                <div class="reveal-up opacity-100 translate-y-0" data-observe="">
+                    <h3 class="font-semibold text-softCanvas mb-4">Our Address</h3>
+                    <p class="text-sm text-warmGray/80 leading-relaxed">
+                        Botway NY, LLC is a Licensed Real Estate Broker in New York
+                    </p>
+                </div>
+
+                <!-- Column 5: Platform -->
+                <div class="reveal-up opacity-100 translate-y-0" data-observe="">
+                    <h3 class="font-semibold text-softCanvas mb-4">Launching Soon</h3>
+                    <ul class="space-y-3 text-sm text-warmGray/80">
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">Atlas</a></li>
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">Console</a></li>
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">Market Maker</a>
+                        </li>
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">Studio</a></li>
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">Intelligence</a>
+                        </li>
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">Vault</a></li>
+                        <li><a href="#" class="hover:text-tangerinePop transition-colors linear 200ms">Blueprint</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom: Copyright + Scroll To Top -->
+            <div class="border-t border-charcoalSand/20 pt-8 flex flex-col sm:flex-row justify-between items-center">
+                <p class="text-sm text-softCanvas text-center sm:text-left mb-4 sm:mb-0">
+                    Copyright © Botway 2025
+                </p>
+                <div class="flex gap-8 text-sm">
+                    <a href="#" class="hover:text-tangerinePop transition-colors linear 200ms text-warmGray/80">Privacy
+                        Policy</a>
+                    <a href="#" class="hover:text-tangerinePop transition-colors linear 200ms text-warmGray/80">Terms of
+                        Service</a>
+                </div>
+
+                <!-- Scroll button is rendered fixed at bottom-right (moved out of footer) -->
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- Fixed scroll-to-top button (bottom-right) -->
+    <button
+        class="scroll-to-top fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-tangerinePop text-white flex items-center justify-center shadow-lg hover:bg-softCanvas hover:text-tangerinePop transition-all linear 200ms opacity-0 pointer-events-none"
+        aria-label="Scroll to top">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- Video modal (hidden by default). Responsive and accessible. -->
+    <div id="video-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" aria-hidden="true">
+        <div id="video-modal-overlay" class="absolute inset-0 bg-inkBlack/80 backdrop-blur-sm"></div>
+
+        <div class="relative w-full max-w-4xl mx-auto">
+            <button id="video-modal-close" aria-label="Close video"
+                class="absolute -top-3 -right-3 z-20 bg-softCanvas rounded-full w-10 h-10 flex items-center justify-center shadow-lg hover:bg-warmGray focus:outline-none transition-all linear 200ms">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-inkBlack" viewBox="0 0 20 20"
+                    fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M10 8.586L15.95 2.636a1 1 0 111.414 1.414L11.414 10l5.95 5.95a1 1 0 01-1.414 1.414L10 11.414l-5.95 5.95a1 1 0 01-1.414-1.414L8.586 10 2.636 4.05A1 1 0 014.05 2.636L10 8.586z"
+                        clip-rule="evenodd" />
+                </svg>
+            </button>
+
+            <div class="bg-inkBlack rounded-lg overflow-hidden aspect-video">
+                <iframe id="video-iframe" class="w-full h-full" src="" title="Founder video" frameborder="0"
+                    allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main-platform.js"></script>
+</body>
+
+</html>
